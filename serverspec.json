@@ -1,0 +1,20 @@
+{
+	"builders":[
+		{
+			"type": "amazon-ebs",
+			"region": "us-west-2",
+			"source_ami": "ami-221ea342",
+			"instance_type": "t2.small",
+			"ssh_username": "admin",
+			"ami_name": "docker-serverspec {{.CreateTime}}"
+		}
+	],
+
+	"provisioners": [
+		{
+			"type": "shell",
+			"script": "configure.sh",
+			"execute_command": "sudo -S sh '{{ .Path }}'"
+		}
+	]
+}
