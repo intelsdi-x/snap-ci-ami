@@ -3,10 +3,11 @@
 		{
 			"type": "amazon-ebs",
 			"region": "us-west-2",
-			"source_ami": "ami-221ea342",
-			"instance_type": "t2.small",
-			"ssh_username": "admin",
-			"ami_name": "docker-serverspec {{.CreateTime}}"
+			"source_ami": "ami-b7a114d7",
+			"instance_type": "t2.micro",
+			"ssh_username": "ubuntu",
+			"ami_name": "snap_ci_{{timestamp}}",
+			"ami_groups": "all"
 		}
 	],
 
